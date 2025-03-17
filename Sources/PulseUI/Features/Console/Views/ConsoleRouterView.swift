@@ -73,8 +73,10 @@ extension ConsoleRouterView {
                         Button(action: { router.isShowingSessions = false }) {
                             Text("Close")
                         }
+                        .foregroundStyle(Color.black)
                     }
                 }
+                .foregroundStyle(Color.black)
         }
     }
 

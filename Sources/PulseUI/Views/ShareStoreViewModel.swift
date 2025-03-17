@@ -96,8 +96,8 @@ import Combine
 
     private func prepareForSharing(store: LoggerStore, options: LoggerStore.ExportOptions) async throws -> ShareItems {
         switch output {
-        case .store:
-            return try await prepareStoreForSharing(store: store, options: options)
+//        case .store:
+//            return try await prepareStoreForSharing(store: store, options: options)
         case .text, .html:
             let output: ShareOutput = output == .text ? .plainText : .html
             return try await prepareForSharing(store: store, output: output, options: options)

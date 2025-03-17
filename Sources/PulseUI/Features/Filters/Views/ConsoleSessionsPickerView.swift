@@ -32,6 +32,7 @@ package struct ConsoleSessionsPickerView: View {
 #if os(iOS) || os(visionOS)
         NavigationLink(destination: ConsoleSessionsPickerView.makeSessionPicker($selection)) {
             InfoRow(title: "Sessions", details: selectedSessionTitle)
+                .foregroundStyle(Color.black)
         }
 #elseif os(macOS)
         HStack {

@@ -37,6 +37,7 @@ public struct ConsoleView: View {
                         Button("", systemImage: "xmark") {
                             presentationMode.wrappedValue.dismiss()
                         }
+                        .foregroundStyle(Color.black)
                     }
                 }
                 ToolbarItemGroup(placement: .navigationBarTrailing) {

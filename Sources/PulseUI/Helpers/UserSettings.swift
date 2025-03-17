@@ -24,7 +24,7 @@ public final class UserSettings: ObservableObject {
 
     /// The default sharing output type. By default, ``ShareStoreOutput/store``.
     @AppStorage("com.github.kean.pulse.sharingOutput")
-    public var sharingOutput: ShareStoreOutput = .store
+    public var sharingOutput: ShareStoreOutput = .text
 
     // Deprecated in Pulse 5.1.
     @available(*, deprecated, message: "Replaced with listDisplayOptions.header.fields and listDisplayOptions.footer.fields")

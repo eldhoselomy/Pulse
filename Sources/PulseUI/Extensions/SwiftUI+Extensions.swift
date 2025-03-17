@@ -57,6 +57,7 @@ extension View {
 extension View {
     package func inlineNavigationTitle(_ title: String) -> some View {
         self.navigationTitle(title)
+            .foregroundStyle(.black)
 #if os(iOS) || os(visionOS)
             .navigationBarTitleDisplayMode(.inline)
 #endif
