@@ -57,6 +57,7 @@ extension ConsoleRouterView {
                 .navigationBarItems(trailing: Button("Done") {
                     router.isShowingFilters = false
                 })
+                .foregroundStyle(.black)
                 .dynamicTypeSize(...DynamicTypeSize.xxxLarge)
         }
     }

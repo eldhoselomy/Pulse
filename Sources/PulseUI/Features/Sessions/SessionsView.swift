@@ -39,6 +39,7 @@ struct SessionsView: View {
                             editMode = editMode.isEditing ? .inactive : .active
                         }
                     }
+                    .foregroundStyle(.black)
                 }
                 ToolbarItem(placement: .bottomBar) {
                     if editMode == .active {

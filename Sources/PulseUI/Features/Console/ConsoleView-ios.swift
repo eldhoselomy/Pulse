@@ -40,7 +40,7 @@ public struct ConsoleView: View {
                     }
                 }
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
-                    trailingNavigationBarItems
+                    trailingNavigationBarItems.foregroundStyle(Color.black)
                 }
             }
             .injecting(environment)

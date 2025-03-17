@@ -56,6 +56,7 @@ package struct ShareStoreView: View {
 #else
             ToolbarItem(placement: .navigationBarLeading) {
                 Button("Cancel", action: onDismiss)
+                    .foregroundStyle(Color.black)
             }
 #endif
         }

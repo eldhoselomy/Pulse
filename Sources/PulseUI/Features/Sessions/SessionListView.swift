@@ -83,6 +83,7 @@ struct SessionListView: View {
                         selection.formUnion(ids)
                     }
                 }.font(.subheadline)
+                    .foregroundStyle(.black)
             }
         }
     }
