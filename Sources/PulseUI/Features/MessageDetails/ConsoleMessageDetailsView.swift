@@ -30,6 +30,7 @@ package struct ConsoleMessageDetailsView: View {
     private var trailingNavigationBarItems: some View {
         NavigationLink(destination: ConsoleMessageMetadataView(message: message)) {
             Image(systemName: "info.circle")
+                .foregroundStyle(.black)
         }
     }
 #elseif os(watchOS)
