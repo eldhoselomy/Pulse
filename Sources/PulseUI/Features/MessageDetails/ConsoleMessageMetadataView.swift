@@ -38,11 +38,11 @@ extension KeyValueSectionViewModel {
                 ("Level", LoggerStore.Level(rawValue: message.level)?.name),
                 ("Label", message.label.nonEmpty)
             ]),
-//            KeyValueSectionViewModel(title: "Details", color: .primary, items: [
-//                ("File", message.file.nonEmpty),
-//                ("Function", message.function.nonEmpty),
-//                ("Line", message.line == 0 ? nil : "\(message.line)")
-//            ]),
+            KeyValueSectionViewModel(title: "Details", color: .primary, items: [
+                ("File", message.file.nonEmpty),
+                ("Function", message.function.nonEmpty),
+                ("Line", message.line == 0 ? nil : "\(message.line)")
+            ]),
             KeyValueSectionViewModel(title: "Metadata", color: .indigo, items: metadataItems)
         ]
     }

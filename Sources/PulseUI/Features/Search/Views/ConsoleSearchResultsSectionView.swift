@@ -52,7 +52,7 @@ struct ConsoleSearchResultView: View {
     private static func _makeDestination(for occurrence: ConsoleSearchOccurrence, entity: NSManagedObject) -> some View {
         switch LoggerEntity(entity) {
         case .message(let message):
-            ConsoleMessageDetailsView(message: message)
+            ConsoleMessageMetadataView(message: message)
         case .task(let task):
             _makeDestination(for: occurrence, task: task)
         }

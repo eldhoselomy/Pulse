@@ -32,7 +32,7 @@ private struct _ConsoleMessageCell: View {
     var body: some View {
 #if os(iOS) || os(visionOS)
         let cell = ConsoleMessageCell(message: message, isDisclosureNeeded: true)
-            .background(NavigationLink("", destination: ConsoleMessageDetailsView(message: message)).opacity(0))
+            .background(NavigationLink("", destination: ConsoleMessageMetadataView(message: message)).opacity(0))
 #else
         let cell = NavigationLink(destination: ConsoleMessageDetailsView(message: message)) {
             ConsoleMessageCell(message: message)
