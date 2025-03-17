@@ -50,7 +50,7 @@ struct RemoteLoggerSettingsView: View {
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding(4)
-                    .background(Color.blue)
+                    .background(Color.black)
                     .cornerRadius(6)
                 VStack(alignment: .leading, spacing: 2) {
                     Text("Remote Logging")

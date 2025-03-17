@@ -53,7 +53,7 @@ private struct ConsoleToolbarView: View {
                 Button(action: { environment.bindingForNetworkMode.wrappedValue.toggle() }) {
                     Image(systemName: "arrow.down.circle")
                 }
-                .background(environment.bindingForNetworkMode.wrappedValue ? Rectangle().foregroundColor(.blue).cornerRadius(8) : nil)
+                .background(environment.bindingForNetworkMode.wrappedValue ? Rectangle().foregroundColor(.black).cornerRadius(8) : nil)
             }
             Button(action: { viewModel.options.isOnlyErrors.toggle() }) {
                 Image(systemName: "exclamationmark.octagon")
@@ -63,7 +63,7 @@ private struct ConsoleToolbarView: View {
             Button(action: { router.isShowingFilters = true }) {
                 Image(systemName: "line.3.horizontal.decrease.circle")
             }
-            .background(viewModel.isDefaultFilters(for: environment.mode) ? nil : Rectangle().foregroundColor(.blue).cornerRadius(8))
+            .background(viewModel.isDefaultFilters(for: environment.mode) ? nil : Rectangle().foregroundColor(.black).cornerRadius(8))
         }
         .font(.title3)
         .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))

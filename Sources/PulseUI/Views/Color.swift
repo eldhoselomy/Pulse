@@ -8,5 +8,5 @@
 import SwiftUI
 
 extension Color {
-    static var pulse: Color { .red }
+    static var pulse: Color { .black }
 }

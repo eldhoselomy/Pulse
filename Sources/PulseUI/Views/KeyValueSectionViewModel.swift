@@ -70,7 +70,7 @@ extension KeyValueSectionViewModel {
         }
         return KeyValueSectionViewModel(
             title: "URL Components",
-            color: .blue,
+            color: .black,
             items: [
                 ("Scheme", components.scheme),
                 ("Port", components.port?.description),

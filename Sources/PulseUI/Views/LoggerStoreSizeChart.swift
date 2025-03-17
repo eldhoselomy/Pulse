@@ -46,7 +46,7 @@ package struct LoggerStoreSizeChart: View {
                 .foregroundStyle(by: .value("Category", $0.category))
         }
         .chartForegroundStyleScale([
-            Category.messages: .blue,
+            Category.messages: .black,
             Category.responses: .green,
             Category.free: .secondaryFill
         ])

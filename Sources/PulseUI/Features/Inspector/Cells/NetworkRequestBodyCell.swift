@@ -14,7 +14,7 @@ struct NetworkRequestBodyCell: View {
         NavigationLink(destination: destination) {
             NetworkMenuCell(
                 icon: "arrow.up.circle.fill",
-                tintColor: .blue,
+                tintColor: .black,
                 title: "Request Body",
                 details: viewModel.details
             )

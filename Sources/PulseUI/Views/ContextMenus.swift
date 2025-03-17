@@ -27,10 +27,10 @@ package enum ContextMenu {
             Section {
                 Button(action: { shareItems = ShareService.share(message, as: .plainText) }) {
                     Label("Share", systemImage: "square.and.arrow.up")
-                }.tint(.blue)
+                }.tint(.black)
                 Button(action: { UXPasteboard.general.string = message.text }) {
                     Label("Copy Message", systemImage: "doc.on.doc")
-                }.tint(.blue)
+                }.tint(.black)
             }
             Section {
                 Menu(content: {
