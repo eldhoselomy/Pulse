@@ -33,7 +33,7 @@ extension KeyValueSectionViewModel {
             .map { ($0.key, $0.value )}
         return [
             KeyValueSectionViewModel(title: "Summary", color: .textColor(for: message.logLevel), items: [
-                ("Event", message.label),
+                ("Event", message.text),
                 ("Date", DateFormatter.fullDateFormatter.string(from: message.createdAt)),
                 ("Level", LoggerStore.Level(rawValue: message.level)?.name),
                 ("Label", message.label.nonEmpty)
