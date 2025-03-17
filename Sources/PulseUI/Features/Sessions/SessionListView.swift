@@ -101,7 +101,7 @@ struct SessionListView: View {
 
                 Button(action: { sharedSessions = .init(ids: [session.id]) }) {
                     Label("Share", systemImage: "square.and.arrow.up.fill")
-                }.tint(.blue)
+                }.tint(.black)
             }
     }
 

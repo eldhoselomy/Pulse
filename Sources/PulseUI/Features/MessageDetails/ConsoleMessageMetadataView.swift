@@ -32,7 +32,7 @@ extension KeyValueSectionViewModel {
             .sorted(by: { $0.key < $1.key })
             .map { ($0.key, $0.value )}
         return [
-            KeyValueSectionViewModel(title: "Summary", color: .textColor(for: message.logLevel), items: [
+            KeyValueSectionViewModel(title: "Summary", color: Color.green, items: [
                 ("Event", message.text),
                 ("Date", DateFormatter.fullDateFormatter.string(from: message.createdAt)),
                 ("Level", LoggerStore.Level(rawValue: message.level)?.name),
@@ -43,7 +43,11 @@ extension KeyValueSectionViewModel {
 //                ("Function", message.function.nonEmpty),
 //                ("Line", message.line == 0 ? nil : "\(message.line)")
 //            ]),
-            KeyValueSectionViewModel(title: "Metadata", color: .indigo, items: metadataItems)
+            KeyValueSectionViewModel(
+                title: "Metadata",
+                color: .red,
+                items: metadataItems
+            )
         ]
     }
 }
