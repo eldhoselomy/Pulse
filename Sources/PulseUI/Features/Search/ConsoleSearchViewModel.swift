@@ -299,7 +299,7 @@ final class ConsoleSearchViewModel: ObservableObject, ConsoleSearchOperationDele
         let recentSearches = recents.searches.prefix(3).map { term in
             ConsoleSearchSuggestion(text: {
                 AttributedString("\(term.options.title) ") { $0.foregroundColor = .primary } +
-                AttributedString(term.text) { $0.foregroundColor = .accentColor }
+                AttributedString(term.text) { $0.foregroundColor = .pulse }
             }(), action: .apply(term))
         }
         return ConsoleSearchSuggestionsViewModel(searches: recentSearches)

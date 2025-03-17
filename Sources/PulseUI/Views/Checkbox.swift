@@ -19,7 +19,7 @@ package struct Checkbox<Label: View>: View {
             HStack {
                 Image(systemName: isOn ? "checkmark.circle.fill" : "circle")
                     .font(.title3)
-                    .foregroundColor(isOn ? .accentColor : .separator)
+                    .foregroundColor(isOn ? .pulse : .separator)
                 label()
                     .frame(maxWidth: .infinity, alignment: .leading)
             }

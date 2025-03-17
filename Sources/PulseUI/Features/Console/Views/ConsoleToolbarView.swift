@@ -127,7 +127,7 @@ package struct ConsoleModeButton: View {
                 }
             }
             .padding(EdgeInsets(top: 8, leading: 9, bottom: 8, trailing: 8))
-            .background(isSelected ? Color.accentColor : Color(.secondarySystemFill).opacity(0.8))
+            .background(isSelected ? Color.pulse : Color(.secondarySystemFill).opacity(0.8))
             .clipShape(RoundedRectangle(cornerRadius: 10))
         }
         .buttonStyle(.plain)

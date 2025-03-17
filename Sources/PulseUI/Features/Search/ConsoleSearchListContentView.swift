@@ -33,7 +33,7 @@ struct ConsoleSearchListContentView: View {
             .font(.subheadline.weight(.medium))
             .foregroundColor(.white)
             .padding(8)
-            .background(Color.accentColor)
+            .background(Color.pulse)
             .cornerRadius(8)
         }
         .listRowSeparator(.hidden)

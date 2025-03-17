@@ -19,7 +19,7 @@ struct ConsoleSearchSuggestionView: View {
             HStack {
                 if case .apply = suggestion.action {
                     Image(systemName: "magnifyingglass")
-                        .foregroundColor(.accentColor)
+                        .foregroundColor(.pulse)
                 } else {
                     Image(systemName: "line.3.horizontal.decrease.circle")
                         .foregroundColor(.secondary)
