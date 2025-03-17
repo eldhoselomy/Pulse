@@ -16,6 +16,7 @@ struct ConsoleMessageMetadataView: View {
     var body: some View {
         RichTextView(viewModel: .init(string: string))
             .navigationTitle("Message Details")
+            .foregroundStyle(.black)
     }
 
     private var string: NSAttributedString {

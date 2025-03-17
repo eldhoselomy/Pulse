@@ -31,11 +31,14 @@ public struct ConsoleView: View {
     private var contents: some View {
         ConsoleListView()
             .navigationTitle(environment.title)
+            .foregroundStyle(.black)
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarLeading) {
                     if !isCloseButtonHidden && presentationMode.wrappedValue.isPresented {
-                        Button("", systemImage: "xmark") {
+                        Button {
                             presentationMode.wrappedValue.dismiss()
+                        } label: {
+                            Image(systemName: "xmark")
                         }
                         .foregroundStyle(Color.black)
                     }

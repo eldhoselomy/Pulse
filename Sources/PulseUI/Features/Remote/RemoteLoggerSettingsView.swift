@@ -177,6 +177,7 @@ struct RemoteLoggerSettingsView_Previews: PreviewProvider {
                 RemoteLoggerSettingsView(viewModel: .init())
             }
             .navigationTitle("Settings")
+            .foregroundStyle(.black)
         }
 #endif
     }

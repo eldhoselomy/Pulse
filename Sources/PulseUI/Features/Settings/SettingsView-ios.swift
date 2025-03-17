@@ -45,6 +45,7 @@ struct SettingsView_Previews: PreviewProvider {
                 .environmentObject(UserSettings.shared)
                 .injecting(ConsoleEnvironment(store: .mock))
                 .navigationTitle("Settings")
+                .foregroundStyle(.black)
         }
     }
 }

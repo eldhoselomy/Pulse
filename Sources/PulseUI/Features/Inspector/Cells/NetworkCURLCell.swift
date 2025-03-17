@@ -28,6 +28,7 @@ struct NetworkCURLCell: View {
         viewModel.isLinkDetectionEnabled = false
         return RichTextView(viewModel: viewModel)
             .navigationTitle("cURL Representation")
+            .foregroundStyle(.black)
     }
 }
 

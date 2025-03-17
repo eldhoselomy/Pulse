@@ -68,6 +68,7 @@ extension ConsoleRouterView {
             SessionsView()
                 .navigationTitle("Sessions")
                 .navigationBarTitleDisplayMode(.inline)
+                .foregroundStyle(.black)
                 .toolbar {
                     ToolbarItemGroup(placement: .navigationBarLeading) {
                         Button(action: { router.isShowingSessions = false }) {
@@ -84,6 +85,7 @@ extension ConsoleRouterView {
         NavigationView {
             SettingsView(store: environment.store)
                 .navigationTitle("Settings")
+                .foregroundStyle(.black)
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarItems(trailing: Button(action: { router.isShowingSettings = false }) {
                     Text("Done")
