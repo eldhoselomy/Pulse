@@ -33,15 +33,16 @@ extension KeyValueSectionViewModel {
             .map { ($0.key, $0.value )}
         return [
             KeyValueSectionViewModel(title: "Summary", color: .textColor(for: message.logLevel), items: [
+                ("Event", message.label),
                 ("Date", DateFormatter.fullDateFormatter.string(from: message.createdAt)),
                 ("Level", LoggerStore.Level(rawValue: message.level)?.name),
                 ("Label", message.label.nonEmpty)
             ]),
-            KeyValueSectionViewModel(title: "Details", color: .primary, items: [
-                ("File", message.file.nonEmpty),
-                ("Function", message.function.nonEmpty),
-                ("Line", message.line == 0 ? nil : "\(message.line)")
-            ]),
+//            KeyValueSectionViewModel(title: "Details", color: .primary, items: [
+//                ("File", message.file.nonEmpty),
+//                ("Function", message.function.nonEmpty),
+//                ("Line", message.line == 0 ? nil : "\(message.line)")
+//            ]),
             KeyValueSectionViewModel(title: "Metadata", color: .indigo, items: metadataItems)
         ]
     }

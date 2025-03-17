@@ -34,7 +34,7 @@ public struct ConsoleView: View {
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarLeading) {
                     if !isCloseButtonHidden && presentationMode.wrappedValue.isPresented {
-                        Button("Close") {
+                        Button("", systemImage: "xmark") {
                             presentationMode.wrappedValue.dismiss()
                         }
                     }

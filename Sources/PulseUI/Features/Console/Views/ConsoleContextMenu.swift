@@ -24,24 +24,26 @@ struct ConsoleContextMenu: View {
             Section {
                 ConsoleSortByMenu()
             }
-            Section {
-                Button(action: { router.isShowingSettings = true }) {
-                    Label("Settings", systemImage: "gear")
-                }
-                if !environment.store.options.contains(.readonly) {
-                    Button(role: .destructive, action: environment.removeAllLogs) {
-                        Label("Remove Logs", systemImage: "trash")
+            if !UserDefaults.standard.bool(forKey: "pulse-disable-settings-menu") {
+                Section {
+                    Button(action: { router.isShowingSettings = true }) {
+                        Label("Settings", systemImage: "gear")
+                    }
+                    if !environment.store.options.contains(.readonly) {
+                        Button(role: .destructive, action: environment.removeAllLogs) {
+                            Label("Remove Logs", systemImage: "trash")
+                        }
                     }
                 }
             }
-            Section {
-                if !UserDefaults.standard.bool(forKey: "pulse-disable-support-prompts") {
+            if !UserDefaults.standard.bool(forKey: "pulse-disable-support-prompts") {
+                Section {
                     Button(action: buttonGetPulseProTapped) {
                         Label("Get Pulse Pro", systemImage: "link")
                     }
-                }
-                Button(action: buttonSendFeedbackTapped) {
-                    Label("Report Issue", systemImage: "envelope")
+                    Button(action: buttonSendFeedbackTapped) {
+                        Label("Report Issue", systemImage: "envelope")
+                    }
                 }
             }
         } label: {
