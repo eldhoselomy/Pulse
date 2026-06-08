@@ -43,6 +43,7 @@ struct SessionsView: View {
             }
             .navigationTitle(editMode.isEditing ? "\(selection.count) Session\(selection.count % 10 == 1 ? "" : "s") Selected" : "Sessions")
             .toolbarTitleDisplayMode(.inline)
+            .tint(.black)
             .toolbar {
                 toolbar
             }

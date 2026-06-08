@@ -33,6 +33,7 @@ public struct ConsoleView: View {
     private var contents: some View {
         ConsoleListView()
             .foregroundStyle(.black)
+            .tint(.black)
 #if os(iOS) || os(visionOS)
             .toolbar {
                 ToolbarItemGroup(placement: .navigationBarLeading) {

@@ -1,5 +1,12 @@
 # Pulse 5.x
 
+## Pulse 5.2.3
+
+*June 9, 2026*
+
+- Merge upstream Pulse changes and resolve conflicts
+- Preserve custom black theme (`Color.pulse`) and hidden components for the fork's use case
+
 ## Pulse 5.2.2
 
 *May 17, 2026*
