@@ -1,6 +1,6 @@
 // The MIT License (MIT)
 //
-// Copyright (c) 2020-2024 Alexander Grebenyuk (github.com/kean).
+// Copyright (c) 2020-2026 Alexander Grebenyuk (github.com/kean).
 
 import Foundation
 import CoreData
@@ -88,6 +88,7 @@ extension URLRequest {
         var bodyStreamData = Data()
         while bodyStream.hasBytesAvailable {
             let readData = bodyStream.read(buffer, maxLength: bufferSize)
+            guard readData != -1 else { return nil } // read failed
             bodyStreamData.append(buffer, count: readData)
         }
         return bodyStreamData
@@ -111,6 +112,11 @@ extension URL {
             return url.host ?? "" // URL(string: "example.com")?.host with not scheme returns host: ""
         }
         return nil
+    }
+
+    func getPath() -> String? {
+        let path = self.path
+        return path.isEmpty ? nil : path
     }
 }
 
